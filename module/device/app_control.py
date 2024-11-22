@@ -50,6 +50,14 @@ class AppControl(Adb, WSA, Uiautomator2):
         else:
             self.app_stop_adb()
 
+    def go_home(self):
+        method = self.config.Emulator_ControlMethod
+        logger.info(f'Go home: {self.package}')
+        # if method in AppControl._app_u2_family:
+        #     self.app_stop_uiautomator2()
+        # else:
+        self.go_home_adb()
+
     def hierarchy_timer_set(self, interval=None):
         if interval is None:
             interval = 0.1
