@@ -304,3 +304,8 @@ class Device(Screenshot, Control, AppControl):
         super().app_stop()
         self.stuck_record_clear()
         self.click_record_clear()
+
+    def go_home(self):
+        super().go_home()
+        self.stuck_record_clear()
+        self.click_record_clear()
