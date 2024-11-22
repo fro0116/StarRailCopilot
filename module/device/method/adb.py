@@ -389,6 +389,13 @@ class Adb(Connection):
         self.adb_shell(['am', 'force-stop', package_name])
 
     @retry
+    def go_home_adb(self, package_name=None):
+        """ Stop one application: am force-stop"""
+        if not package_name:
+            package_name = self.package
+        self.adb_shell(['input', 'keyevent', 'KEYCODE_HOME'])
+
+    @retry
     def dump_hierarchy_adb(self, temp: str = '/data/local/tmp/hierarchy.xml') -> etree._Element:
         """
         Args:
