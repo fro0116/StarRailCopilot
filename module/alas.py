@@ -216,6 +216,12 @@ class AzurLaneAutoScript:
                         continue
                     if task.command != 'Restart':
                         self.config.task_call('Restart')
+                elif method == 'goto_home':
+                    logger.info('Goto home screen during wait')
+                    self.run('goto_home')
+                    release_resources()
+                    self.device.release_during_wait()
+                    if not self.wait_until(task.next_run):
                         del_cached_property(self, 'config')
                         continue
                 elif method == 'goto_main':
