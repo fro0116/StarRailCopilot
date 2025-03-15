@@ -30,7 +30,7 @@
   "Restart": {
     "Scheduler": {
       "Enable": true,
-      "NextRun": "2025-03-11 13:00:00",
+      "NextRun": "2025-03-15 13:00:00",
       "Command": "Restart",
       "ServerUpdate": "04:00"
     }
@@ -38,7 +38,7 @@
   "Dungeon": {
     "Scheduler": {
       "Enable": true,
-      "NextRun": "2025-03-11 04:28:58",
+      "NextRun": "2025-03-14 18:27:24",
       "Command": "Dungeon",
       "ServerUpdate": "04:00"
     },
@@ -110,8 +110,8 @@
       "Item_Eternal_Lament": {}
     },
     "Dungeon": {
-      "Name": "Calyx_Crimson_Harmony_Penacony_TheReverieDreamscape",
-      "NameAtDoubleCalyx": "Calyx_Crimson_Harmony_Penacony_TheReverieDreamscape",
+      "Name": "Calyx_Crimson_Nihility_Jarilo_GreatMine",
+      "NameAtDoubleCalyx": "Calyx_Crimson_Nihility_Jarilo_GreatMine",
       "NameAtDoubleRelic": "Cavern_of_Corrosion_Path_of_Uncertainty",
       "Team": 1
     },
@@ -121,26 +121,26 @@
     },
     "DungeonStorage": {
       "TrailblazePower": {
-        "time": "2025-03-11 02:30:25",
+        "time": "2025-03-14 13:03:20",
         "total": 300,
-        "value": 40
+        "value": 6
       },
       "Reserved": {
-        "time": "2025-03-11 02:30:25",
+        "time": "2025-03-14 13:03:20",
         "total": 2400,
         "value": 0
       },
       "Fuel": {},
       "Immersifier": {
-        "time": "2025-03-11 02:30:25",
+        "time": "2025-03-11 07:36:12",
         "total": 12,
         "value": 0
       },
       "DungeonDouble": {
-        "time": "2025-03-10 13:04:43",
+        "time": "2025-03-14 13:01:32",
         "calyx": 0,
         "relic": 0,
-        "rogue": 0
+        "rogue": 12
       },
       "EchoOfWar": {
         "time": "2025-03-10 22:39:24",
@@ -148,7 +148,7 @@
         "value": 0
       },
       "SimulatedUniverse": {
-        "time": "2025-03-11 02:30:23",
+        "time": "2025-03-11 07:36:09",
         "total": 14000,
         "value": 14000
       }
@@ -162,7 +162,7 @@
   "Ornament": {
     "Scheduler": {
       "Enable": false,
-      "NextRun": "2025-03-11 04:28:58",
+      "NextRun": "2025-03-14 18:27:24",
       "Command": "Ornament",
       "ServerUpdate": "04:00"
     },
@@ -185,46 +185,46 @@
   "DailyQuest": {
     "Scheduler": {
       "Enable": true,
-      "NextRun": "2025-03-11 13:00:00",
+      "NextRun": "2025-03-15 13:00:00",
       "Command": "DailyQuest",
       "ServerUpdate": "04:00"
     },
     "DailyStorage": {
       "DailyActivity": {
-        "time": "2025-03-10 18:49:27",
+        "time": "2025-03-14 15:28:39",
         "total": 500,
-        "value": 500
+        "value": 400
       },
       "DailyQuest": {
-        "time": "2025-03-10 18:49:27",
-        "quest1": "",
-        "quest2": "",
-        "quest3": "",
-        "quest4": "",
+        "time": "2025-03-14 15:28:41",
+        "quest1": "Consume_120_Trailblaze_Power",
+        "quest2": "Inflict_Weakness_Break_5_times",
+        "quest3": "Level_up_any_Relic_1_times",
+        "quest4": "Complete_Divergent_Universe_or_Simulated_Universe_1_times",
         "quest5": "",
         "quest6": "",
         "quest7": "",
         "quest8": "",
         "total": 8,
-        "value": 8
+        "value": 4
       }
     }
   },
   "BattlePass": {
     "Scheduler": {
       "Enable": true,
-      "NextRun": "2025-03-11 13:00:00",
+      "NextRun": "2025-03-15 13:00:00",
       "Command": "BattlePass",
       "ServerUpdate": "04:00"
     },
     "BattlePassStorage": {
       "BattlePassLevel": {
-        "time": "2025-03-10 22:41:03",
+        "time": "2025-03-14 13:03:45",
         "total": 70,
-        "value": 39
+        "value": 42
       },
       "BattlePassWeeklyQuest": {
-        "time": "2025-03-10 22:41:16",
+        "time": "2025-03-14 13:03:50",
         "quest1": "Consume_a_total_of_1_Trailblaze_Power_1400_Trailblazer_Power_max",
         "quest2": "Clear_Stagnant_Shadow_1_times",
         "quest3": "Synthesize_Consumables_1_times",
@@ -236,32 +236,32 @@
         "value": 4
       },
       "BattlePassSimulatedUniverse": {
-        "time": "2025-03-10 22:41:16",
+        "time": "2025-03-14 13:03:50",
         "total": 1,
         "value": 1
       },
       "BattlePassQuestCalyx": {
-        "time": "2025-03-10 22:41:16",
+        "time": "2025-03-14 13:03:50",
         "total": 20,
         "value": 20
       },
       "BattlePassQuestEchoOfWar": {
-        "time": "2025-03-10 22:41:16",
+        "time": "2025-03-14 13:03:50",
         "total": 2,
         "value": 2
       },
       "BattlePassQuestCredits": {
-        "time": "2025-03-10 22:41:16",
+        "time": "2025-03-14 13:03:50",
         "total": 300000,
         "value": 300000
       },
       "BattlePassQuestSynthesizeConsumables": {
-        "time": "2025-03-10 22:41:16",
+        "time": "2025-03-14 13:03:50",
         "total": 10,
         "value": 0
       },
       "BattlePassQuestStagnantShadow": {
-        "time": "2025-03-10 22:41:16",
+        "time": "2025-03-14 13:03:50",
         "total": 3,
         "value": 0
       },
@@ -271,16 +271,16 @@
         "value": 0
       },
       "BattlePassQuestTrailblazePower": {
-        "time": "2025-03-10 22:41:16",
-        "total": 500,
-        "value": 410
+        "time": "2025-03-14 13:03:50",
+        "total": 1300,
+        "value": 1270
       }
     }
   },
   "Assignment": {
     "Scheduler": {
       "Enable": true,
-      "NextRun": "2025-03-11 04:03:23",
+      "NextRun": "2025-03-15 13:00:00",
       "Command": "Assignment",
       "ServerUpdate": "04:00"
     },
@@ -292,7 +292,7 @@
       "Duration": 20,
       "Event": true,
       "Assignment": {
-        "time": "2025-03-10 13:04:05",
+        "time": "2025-03-14 15:28:32",
         "total": 4,
         "value": 4
       }
@@ -301,18 +301,18 @@
   "DataUpdate": {
     "Scheduler": {
       "Enable": true,
-      "NextRun": "2025-03-11 13:00:00",
+      "NextRun": "2025-03-15 13:00:00",
       "Command": "DataUpdate",
       "ServerUpdate": "04:00"
     },
     "ItemStorage": {
       "Credit": {
-        "time": "2025-03-10 13:06:41",
-        "value": 3281757
+        "time": "2025-03-14 15:28:45",
+        "value": 2658867
       },
       "StallerJade": {
-        "time": "2025-03-10 13:06:41",
-        "value": 47900
+        "time": "2025-03-14 15:28:45",
+        "value": 48685
       }
     },
     "CloudStorage": {
@@ -324,7 +324,7 @@
   "Freebies": {
     "Scheduler": {
       "Enable": true,
-      "NextRun": "2025-03-11 13:00:00",
+      "NextRun": "2025-03-15 13:00:00",
       "Command": "Freebies",
       "ServerUpdate": "04:00"
     },
@@ -351,7 +351,7 @@
   "Rogue": {
     "Scheduler": {
       "Enable": true,
-      "NextRun": "2025-03-10 13:00:00",
+      "NextRun": "2025-03-15 13:00:00",
       "Command": "Rogue",
       "ServerUpdate": "04:00"
     },
@@ -365,9 +365,9 @@
       "WeeklyFarming": true,
       "UseStamina": false,
       "SimulatedUniverseFarm": {
-        "time": "2025-03-11 02:00:18",
+        "time": "2025-03-11 07:53:49",
         "total": 100,
-        "value": 49
+        "value": 100
       }
     },
     "RogueBlessing": {
