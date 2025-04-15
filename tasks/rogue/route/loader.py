@@ -5,7 +5,7 @@ from module.base.decorator import cached_property
 from module.base.timer import Timer
 from module.exception import GameStuckError, HandledError, ScriptError
 from module.logger import logger, save_error_log
-from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_NOW
+from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_GOOD
 from tasks.base.assets.assets_base_page import MAP_EXIT
 from tasks.character.switch import CharacterSwitch
 from tasks.map.keywords import MapPlane
