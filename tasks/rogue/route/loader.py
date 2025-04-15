@@ -6,7 +6,7 @@ from module.base.decorator import cached_property
 from module.base.timer import Timer
 from module.exception import GameStuckError, HandledError
 from module.logger import logger, save_error_log
-from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_NOW
+from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_GOOD
 from tasks.base.assets.assets_base_page import MAP_EXIT
 from tasks.character.switch import CharacterSwitch
 from tasks.map.keywords import MapPlane
@@ -301,7 +301,7 @@ class RouteLoader(RouteBase, MinimapWrapper, RouteLoader_, CharacterSwitch):
                 continue
             if self.handle_popup_confirm():
                 continue
-            if self.appear_then_click(ROGUE_LEAVE_FOR_NOW, interval=2):
+            if self.appear_then_click(ROGUE_LEAVE_FOR_GOOD, interval=2):
                 continue
             # Blessing
             if self.handle_blessing():
