@@ -9,7 +9,7 @@ from module.base.utils import color_similarity_2d
 from module.exception import RequestHumanTakeover, ScriptError
 from module.logger import logger
 from module.ocr.ocr import Ocr
-from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_NOW
+from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_GOOD
 from tasks.base.assets.assets_base_page import MAP_EXIT
 from tasks.base.page import page_guide, page_item, page_main, page_rogue
 from tasks.dungeon.keywords import DungeonList
@@ -305,7 +305,7 @@ class RogueEntry(RouteBase, RogueRewardHandler, RoguePathHandler, DungeonRogueUI
                 continue
             if self.handle_popup_confirm():
                 continue
-            if self.appear_then_click(ROGUE_LEAVE_FOR_NOW, interval=2):
+            if self.appear_then_click(ROGUE_LEAVE_FOR_GOOD, interval=2):
                 continue
 
     def _rogue_teleport(self, skip_first_screenshot=True):
