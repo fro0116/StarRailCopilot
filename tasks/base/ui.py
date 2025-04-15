@@ -4,7 +4,7 @@ from module.base.timer import Timer
 from module.exception import GameNotRunningError, GamePageUnknownError, HandledError
 from module.logger import logger
 from module.ocr.ocr import Ocr
-from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_NOW, ROGUE_LEAVE_FOR_NOW_OE
+from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_GOOD, ROGUE_LEAVE_FOR_NOW_OE
 from tasks.base.assets.assets_base_page import CLOSE, MAIN_GOTO_CHARACTER, MAP_EXIT, MAP_EXIT_OE
 from tasks.base.assets.assets_base_popup import POPUP_STORY_LATER
 from tasks.base.main_page import MainPage
@@ -502,7 +502,7 @@ class UI(MainPage):
                 continue
             if self.handle_ui_close(page_gacha.check_button, interval=2):
                 continue
-            if self.appear_then_click(ROGUE_LEAVE_FOR_NOW, interval=2):
+            if self.appear_then_click(ROGUE_LEAVE_FOR_GOOD, interval=2):
                 clicked = True
                 continue
             if self.appear_then_click(ROGUE_LEAVE_FOR_NOW_OE, interval=2):

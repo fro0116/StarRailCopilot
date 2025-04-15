@@ -33,3 +33,13 @@ ROGUE_LEAVE_FOR_NOW_OE = ButtonWrapper(
         button=(730, 551, 760, 587),
     ),
 )
+ROGUE_LEAVE_FOR_GOOD = ButtonWrapper(
+    name='ROGUE_LEAVE_FOR_GOOD',
+    share=Button(
+        file='./assets/share/base/main_page/ROGUE_LEAVE_FOR_GOOD.png',
+        area=(729, 595, 765, 639),
+        search=(709, 575, 785, 659),
+        color=(82, 74, 59),
+        button=(729, 595, 765, 639),
+    ),
+)

@@ -1,6 +1,6 @@
 from module.exception import RequestHumanTakeover
 from module.logger import logger
-from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_NOW
+from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_GOOD
 from tasks.base.assets.assets_base_page import MAP_EXIT
 from tasks.rogue.assets.assets_rogue_ui import BLESSING_CONFIRM
 from tasks.rogue.assets.assets_rogue_weekly import ROGUE_REPORT
@@ -32,7 +32,7 @@ class Rogue(RouteLoader, RogueEntry):
                 continue
             if self.handle_popup_confirm():
                 continue
-            if self.appear_then_click(ROGUE_LEAVE_FOR_NOW, interval=2):
+            if self.appear_then_click(ROGUE_LEAVE_FOR_GOOD, interval=2):
                 continue
             # Blessing
             if self.handle_blessing():
