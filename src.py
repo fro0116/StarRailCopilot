@@ -1,5 +1,6 @@
 from module.alas import AzurLaneAutoScript
 from module.logger import logger
+import argparse
 
 
 class StarRailCopilot(AzurLaneAutoScript):
@@ -96,5 +97,17 @@ class StarRailCopilot(AzurLaneAutoScript):
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='StarRailCopilot')
+    parser.add_argument('task', nargs='?', help='Task to run (e.g. daily_quest, battle_pass, etc.)')
+    args = parser.parse_args()
+
     src = StarRailCopilot('src')
-    src.loop()
+    if args.task:
+        if hasattr(src, args.task):
+            if args.task != 'start':
+                src.start()
+            getattr(src, args.task)()
+        else:
+            logger.error(f'Unknown task: {args.task}')
+    else:
+        src.loop()
