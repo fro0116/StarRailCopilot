@@ -141,6 +141,7 @@
         "option": [
           "stay_there",
           "goto_main",
+          "goto_home",
           "close_game",
           "close_emulator"
         ]

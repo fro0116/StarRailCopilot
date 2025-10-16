@@ -232,6 +232,7 @@
       "help": "Optimization.WhenTaskQueueEmpty.help",
       "stay_there": "stay_there",
       "goto_main": "goto_main",
+      "goto_home": "goto_home",
       "close_game": "close_game",
       "close_emulator": "close_emulator"
     }
