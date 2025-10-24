@@ -1054,7 +1054,7 @@ class Connection(ConnectionAttr):
             manager = EmulatorManager()
             manager.brute_force_connect()
 
-        for _ in range(2):
+        for _ in range(8):
             logger.info('Here are the available devices, '
                         'copy to Alas.Emulator.Serial to use it or set Alas.Emulator.Serial="auto"')
             devices = self.list_device()
@@ -1073,6 +1073,7 @@ class Connection(ConnectionAttr):
                 for device in unavailable:
                     logger.info(f'{device.serial} ({device.status})')
 
+            time.sleep(3.2)
             # brute_force_connect
             if self.config.Emulator_Serial == 'auto' and available.count == 0:
                 logger.warning(f'No available device found')

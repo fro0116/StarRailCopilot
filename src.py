@@ -1,5 +1,7 @@
 from module.alas import AzurLaneAutoScript
 from module.logger import logger
+import argparse
+from module.config.config import name_to_function
 
 
 class StarRailCopilot(AzurLaneAutoScript):
@@ -14,6 +16,20 @@ class StarRailCopilot(AzurLaneAutoScript):
     def stop(self):
         from tasks.login.login import Login
         Login(self.config, device=self.device).app_stop()
+
+    def goto_main(self):
+        from tasks.login.login import Login
+        from tasks.base.ui import UI
+        if self.device.app_is_running():
+            logger.info('App is already running, goto main page')
+            UI(self.config, device=self.device).ui_goto_main()
+        else:
+            logger.info('App is not running, start app and goto main page')
+            Login(self.config, device=self.device).app_start()
+            UI(self.config, device=self.device).ui_goto_main()
+
+    def goto_home(self):
+        self.device.go_home()
 
     def goto_main(self):
         from tasks.login.login import Login
@@ -82,5 +98,21 @@ class StarRailCopilot(AzurLaneAutoScript):
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='StarRailCopilot')
+    parser.add_argument('task', nargs='?', help='Task to run (e.g. daily_quest, battle_pass, etc.)')
+    args = parser.parse_args()
+
     src = StarRailCopilot('src')
-    src.loop()
+    if args.task:
+        if hasattr(src, args.task):
+            if args.task != 'start':
+                src.start()
+            # Set and bind the task command before running
+            src.config.task = name_to_function(args.task)
+            src.config.bind(args.task)
+            src.config.init_task(args.task)
+            getattr(src, args.task)()
+        else:
+            logger.error(f'Unknown task: {args.task}')
+    else:
+        src.loop()

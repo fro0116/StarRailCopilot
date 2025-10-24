@@ -1,0 +1,8 @@
+name: noop
+run-name: noop🚀
+on: [push]
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "done"

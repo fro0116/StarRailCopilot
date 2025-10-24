@@ -1,6 +1,6 @@
 from module.exception import RequestHumanTakeover
 from module.logger import logger
-from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_NOW
+from tasks.base.assets.assets_base_main_page import ROGUE_LEAVE_FOR_GOOD
 from tasks.base.assets.assets_base_page import MAP_EXIT
 from tasks.battle_pass.keywords import KEYWORDS_BATTLE_PASS_QUEST
 from tasks.daily.keywords import KEYWORDS_DAILY_QUEST
@@ -34,7 +34,7 @@ class Rogue(RouteLoader, RogueEntry):
                 continue
             if self.handle_popup_confirm():
                 continue
-            if self.appear_then_click(ROGUE_LEAVE_FOR_NOW, interval=2):
+            if self.appear_then_click(ROGUE_LEAVE_FOR_GOOD, interval=2):
                 continue
             # Blessing
             if self.handle_blessing():
@@ -113,9 +113,12 @@ class Rogue(RouteLoader, RogueEntry):
     def run(self):
         self.config.update_battle_pass_quests()
         self.config.update_daily_quests()
-        if self.config.stored.DungeonDouble.is_expired():
-            self.config.task_call('Dungeon')
-            self.config.task_stop()
+        
+        # Skip DungeonDouble check when running directly
+        if not self.config.task.command.lower() == 'rogue':
+            if self.config.stored.DungeonDouble.is_expired():
+                self.config.task_call('Dungeon')
+                self.config.task_stop()
 
         # Run
         success = self.rogue_once()

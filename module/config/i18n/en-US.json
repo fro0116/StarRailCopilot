@@ -232,6 +232,7 @@
       "help": "Close AL when there are no pending tasks, can help reduce CPU",
       "stay_there": "Stay There",
       "goto_main": "Goto Main Page",
+      "goto_home": "Goto Home Screen",
       "close_game": "Close Game",
       "close_emulator": "Close Emulator"
     }
